@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>swarm_intel</name>
+  <version>1.8.5</version>
+  <description>Closed-loop 5-drone Gazebo study: energy, accuracy and safety of 12 navigation configurations and mixed fleets vs the 3-point camera + VIO baseline. Every drone is an edge node: its own EKF, map, RRT* / A* planning and turn trading; the whole fleet is scored</description>
+  <maintainer email="r010702v@gmail.com">Rajat Verma</maintainer>
+  <license>GPL-3.0-or-later</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rosgraph_msgs</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

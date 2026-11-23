@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Sense, Share, or Separate: a ROS 2 / Gazebo benchmark for multi-drone navigation under rotor downwash"
+type: software
+authors:
+  - family-names: Verma
+    given-names: Rajat
+    email: r010702v@gmail.com
+version: 1.8.4
+date-released: 2026-11-20
+license: GPL-3.0-or-later
+keywords:
+  - ROS 2
+  - Gazebo
+  - multi-robot systems
+  - aerial swarms
+  - rotor downwash
+  - cooperative localization
+  - extended Kalman filter
+  - energy-aware sensing

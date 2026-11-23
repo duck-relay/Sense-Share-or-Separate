@@ -1,0 +1,1078 @@
+{
+  "model_version": "2026.11-fleet.3",
+  "nav": "cam3_sensor",
+  "nav_label": "Baseline: 3-point camera + VIO",
+  "nav_parts": "3-point camera + VIO",
+  "fleet_navs": [
+    "cam3_sensor",
+    "cam3_sensor",
+    "cam3_sensor",
+    "cam3_sensor",
+    "cam3_sensor"
+  ],
+  "layout": 0,
+  "wind_mean_ms": 0.2,
+  "seed": 2,
+  "speed_scale": 1.0,
+  "mission_time_s": 39.050000000000004,
+  "all_landed_at_s": 39.050000000000004,
+  "reference_paths": {
+    "1": [
+      [
+        -8.0,
+        -8.0
+      ],
+      [
+        -5.1,
+        -5.7
+      ],
+      [
+        2.700000000000001,
+        1.3000000000000007
+      ],
+      [
+        3.5,
+        1.3000000000000007
+      ],
+      [
+        8.3,
+        3.700000000000001
+      ],
+      [
+        8.7,
+        4.700000000000001
+      ],
+      [
+        8.3,
+        7.900000000000002
+      ],
+      [
+        8.0,
+        8.0
+      ]
+    ],
+    "2": [
+      [
+        -5.0,
+        5.0
+      ],
+      [
+        3.1000000000000014,
+        -1.0999999999999996
+      ],
+      [
+        6.0,
+        -9.0
+      ]
+    ],
+    "3": [
+      [
+        5.0,
+        -5.0
+      ],
+      [
+        2.700000000000001,
+        -0.6999999999999993
+      ],
+      [
+        -5.1,
+        4.100000000000001
+      ],
+      [
+        -6.0,
+        4.5
+      ]
+    ],
+    "4": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -5.8999999999999995,
+        -6.5
+      ],
+      [
+        -7.1,
+        -6.699999999999999
+      ],
+      [
+        -8.8,
+        -6.8
+      ]
+    ],
+    "5": [
+      [
+        6.0,
+        6.0
+      ],
+      [
+        5.9,
+        6.300000000000001
+      ],
+      [
+        5.9,
+        6.5
+      ],
+      [
+        7.100000000000001,
+        6.699999999999999
+      ],
+      [
+        8.100000000000001,
+        6.5
+      ],
+      [
+        8.5,
+        5.9
+      ],
+      [
+        8.7,
+        5.100000000000001
+      ],
+      [
+        8.5,
+        3.9000000000000004
+      ],
+      [
+        -1.299999999999999,
+        -8.7
+      ],
+      [
+        -1.5,
+        -8.8
+      ]
+    ]
+  },
+  "planner": "rrtstar",
+  "give_way": "ttc",
+  "fleet": [
+    {
+      "id": 1,
+      "name": "drone1",
+      "color": "#eb6834",
+      "nav": "cam3_sensor",
+      "nav_label": "Baseline: 3-point camera + VIO",
+      "state": "LANDED",
+      "failed": false,
+      "goal_reached": true,
+      "flight_time_s": 33.300000000000004,
+      "energy_kj": 5.687765126860747,
+      "energy_wh": 1.579934757461319,
+      "battery_soc": 97.86495303045768,
+      "avg_power_w": 170.8037575633858,
+      "peak_power_w": 327.4787199405176,
+      "distance_m": 29.663367518060344,
+      "horizontal_distance_m": 26.243593561694837,
+      "ref_length_m": 24.966536082686126,
+      "length_ratio": 1.0511507673623306,
+      "cte_rms_m": 0.7247988777770552,
+      "track_rms_m": 0.2741668707596149,
+      "track_max_m": 1.0063754765661548,
+      "cte_mean_m": 0.5799340010270968,
+      "cte_max_m": 1.3925197373869822,
+      "on_path_pct": 50.8,
+      "loc_rms_m": 0.03285313906198984,
+      "loc_max_m": 0.08212391159262983,
+      "landing_err_m": 0.008895544867602679,
+      "replans": 3,
+      "stuck_events": 0,
+      "escapes": 0,
+      "yield_time_s": 0.0,
+      "avoid_time_s": 12.148,
+      "give_way_s": {
+        "hold": 0.0,
+        "slow": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "up": 0.0,
+        "down": 0.0
+      },
+      "contacts": 0,
+      "max_speed_ms": 2.141997905904927,
+      "plans": 26,
+      "ref_plan_ms": 109.8000839992892,
+      "plan_time_ms_mean": 115.1064576157436,
+      "plan_time_ms_max": 590.0105000000622,
+      "ttc_trades": 0.0,
+      "energy_parts_kj": {
+        "profile": 1.0458607162188562,
+        "induced": 4.2610658066068074,
+        "parasite": 0.0004998686884418475,
+        "climb": 0.04733873534663629,
+        "electronics": 0.21645000000000153,
+        "navigation": 0.11654999999999882
+      },
+      "nav_power_w": 3.5,
+      "energy_per_m_j": 216.72966064992764,
+      "loc_final_m": 0.029844153748479464,
+      "sigma_mean_m": 0.028489324915147624,
+      "consistency": 0.6880190006815122,
+      "cam_frames": 333,
+      "cam_fix_pct": 66.96696696696696,
+      "cam_markers_visible_mean": 3.4114114114114114,
+      "cam_markers_used": 750,
+      "longest_no_fix_s": 1.9499999999999993,
+      "peer_updates": 0,
+      "meas_updates": 4253,
+      "meas_rejected": 44,
+      "safety_interventions": 118,
+      "depth_brakes": 56,
+      "hard_brakes": 22,
+      "unknown_known": 3,
+      "min_separation_m": 1.0552933533389888,
+      "min_separation_3d_m": 1.0552963203892238,
+      "min_sep_margin_m": -0.23470664666101126,
+      "wake_time_s": 0.0,
+      "wake_max_ms": 0.0018166695120883855,
+      "drone_contacts": 0
+    },
+    {
+      "id": 2,
+      "name": "drone2",
+      "color": "#6250d6",
+      "nav": "cam3_sensor",
+      "nav_label": "Baseline: 3-point camera + VIO",
+      "state": "LANDED",
+      "failed": false,
+      "goal_reached": true,
+      "flight_time_s": 34.00000000000001,
+      "energy_kj": 5.894926454013392,
+      "energy_wh": 1.6374795705592755,
+      "battery_soc": 97.7871897695145,
+      "avg_power_w": 173.38018982392325,
+      "peak_power_w": 472.20268304636227,
+      "distance_m": 27.975567306532724,
+      "horizontal_distance_m": 24.599622721468045,
+      "ref_length_m": 18.555481683834394,
+      "length_ratio": 1.3257334485096837,
+      "cte_rms_m": 0.3034275261561335,
+      "track_rms_m": 0.14072186202068013,
+      "track_max_m": 0.4546520300510889,
+      "cte_mean_m": 0.2163428173482267,
+      "cte_max_m": 0.756417359616324,
+      "on_path_pct": 85.04854368932038,
+      "loc_rms_m": 0.038799340278312805,
+      "loc_max_m": 0.1203721437539688,
+      "landing_err_m": 0.0669087239689394,
+      "replans": 2,
+      "stuck_events": 1,
+      "escapes": 0,
+      "yield_time_s": 0.0,
+      "avoid_time_s": 12.549999999999999,
+      "give_way_s": {
+        "hold": 0.0,
+        "slow": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "up": 0.0,
+        "down": 0.0
+      },
+      "contacts": 0,
+      "max_speed_ms": 1.7037689539591805,
+      "plans": 27,
+      "ref_plan_ms": 37.4984879999829,
+      "plan_time_ms_mean": 133.51280655600326,
+      "plan_time_ms_max": 552.3175859998446,
+      "ttc_trades": 0.0,
+      "energy_parts_kj": {
+        "profile": 1.0678785864063047,
+        "induced": 4.438778647828967,
+        "parasite": 0.0006063960225421625,
+        "climb": 0.047662823755581195,
+        "electronics": 0.2210000000000015,
+        "navigation": 0.11899999999999872
+      },
+      "nav_power_w": 3.5,
+      "energy_per_m_j": 239.6348318329655,
+      "loc_final_m": 0.025695269615603915,
+      "sigma_mean_m": 0.04609869822068623,
+      "consistency": 0.493693795799368,
+      "cam_frames": 340,
+      "cam_fix_pct": 45.588235294117645,
+      "cam_markers_visible_mean": 3.023529411764706,
+      "cam_markers_used": 518,
+      "longest_no_fix_s": 6.75,
+      "peer_updates": 0,
+      "meas_updates": 3769,
+      "meas_rejected": 29,
+      "safety_interventions": 180,
+      "depth_brakes": 41,
+      "hard_brakes": 45,
+      "unknown_known": 5,
+      "min_separation_m": 0.9984146750367631,
+      "min_separation_3d_m": 0.9984279722728326,
+      "min_sep_margin_m": -0.29158532496323697,
+      "wake_time_s": 0.0,
+      "wake_max_ms": 0.0035796248121084673,
+      "drone_contacts": 1
+    },
+    {
+      "id": 3,
+      "name": "drone3",
+      "color": "#1baf7a",
+      "nav": "cam3_sensor",
+      "nav_label": "Baseline: 3-point camera + VIO",
+      "state": "LANDED",
+      "failed": false,
+      "goal_reached": true,
+      "flight_time_s": 31.550000000000004,
+      "energy_kj": 5.4761595953112225,
+      "energy_wh": 1.5211554431420062,
+      "battery_soc": 97.94438453629458,
+      "avg_power_w": 173.57082710970593,
+      "peak_power_w": 507.6657147950791,
+      "distance_m": 23.97739207372107,
+      "horizontal_distance_m": 20.55843015625379,
+      "ref_length_m": 15.019962429758504,
+      "length_ratio": 1.3687404514089945,
+      "cte_rms_m": 0.316546054528961,
+      "track_rms_m": 0.26407103181192143,
+      "track_max_m": 0.9202537317020404,
+      "cte_mean_m": 0.19424759237150915,
+      "cte_max_m": 0.8684172434586347,
+      "on_path_pct": 83.15334773218143,
+      "loc_rms_m": 0.0380365935045308,
+      "loc_max_m": 0.10779103994931427,
+      "landing_err_m": 0.05884046516357052,
+      "replans": 0,
+      "stuck_events": 0,
+      "escapes": 0,
+      "yield_time_s": 0.0,
+      "avoid_time_s": 12.549999999999999,
+      "give_way_s": {
+        "hold": 0.0,
+        "slow": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "up": 0.0,
+        "down": 0.0
+      },
+      "contacts": 0,
+      "max_speed_ms": 1.5023544395243622,
+      "plans": 24,
+      "ref_plan_ms": 39.760419000231195,
+      "plan_time_ms_mean": 220.52581087533932,
+      "plan_time_ms_max": 614.8803659998521,
+      "ttc_trades": 0.0,
+      "energy_parts_kj": {
+        "profile": 0.9910176238764352,
+        "induced": 4.122353196094349,
+        "parasite": 0.0008705666587937877,
+        "climb": 0.04641820868164865,
+        "electronics": 0.20507500000000153,
+        "navigation": 0.11042499999999901
+      },
+      "nav_power_w": 3.5,
+      "energy_per_m_j": 266.37051339473976,
+      "loc_final_m": 0.040816708099383696,
+      "sigma_mean_m": 0.029118201520087997,
+      "consistency": 0.7905156577830545,
+      "cam_frames": 316,
+      "cam_fix_pct": 71.51898734177215,
+      "cam_markers_visible_mean": 3.471518987341772,
+      "cam_markers_used": 738,
+      "longest_no_fix_s": 1.6499999999999986,
+      "peer_updates": 0,
+      "meas_updates": 4207,
+      "meas_rejected": 35,
+      "safety_interventions": 169,
+      "depth_brakes": 41,
+      "hard_brakes": 46,
+      "unknown_known": 4,
+      "min_separation_m": 0.9984146750367631,
+      "min_separation_3d_m": 0.9984279722728326,
+      "min_sep_margin_m": -0.29158532496323697,
+      "wake_time_s": 0.0,
+      "wake_max_ms": 0.0009203882524993776,
+      "drone_contacts": 1
+    },
+    {
+      "id": 4,
+      "name": "drone4",
+      "color": "#9b2d5b",
+      "nav": "cam3_sensor",
+      "nav_label": "Baseline: 3-point camera + VIO",
+      "state": "LANDED",
+      "failed": false,
+      "goal_reached": true,
+      "flight_time_s": 24.700000000000003,
+      "energy_kj": 4.236977671974163,
+      "energy_wh": 1.1769382422150454,
+      "battery_soc": 98.40954291592561,
+      "avg_power_w": 171.53755756980416,
+      "peak_power_w": 310.1118915422029,
+      "distance_m": 19.12411194459624,
+      "horizontal_distance_m": 15.734114833812935,
+      "ref_length_m": 11.697873681594183,
+      "length_ratio": 1.3450405827658667,
+      "cte_rms_m": 1.1186607072472008,
+      "track_rms_m": 0.2567131248585736,
+      "track_max_m": 0.7905088942948301,
+      "cte_mean_m": 0.8802551869080081,
+      "cte_max_m": 2.390362023366079,
+      "on_path_pct": 37.08206686930091,
+      "loc_rms_m": 0.03846586338201182,
+      "loc_max_m": 0.09079783592759952,
+      "landing_err_m": 0.07498484897976514,
+      "replans": 6,
+      "stuck_events": 0,
+      "escapes": 0,
+      "yield_time_s": 0.0,
+      "avoid_time_s": 6.300000000000001,
+      "give_way_s": {
+        "hold": 0.0,
+        "slow": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "up": 0.0,
+        "down": 0.0
+      },
+      "contacts": 0,
+      "max_speed_ms": 2.0900992674625005,
+      "plans": 19,
+      "ref_plan_ms": 23.055396999552613,
+      "plan_time_ms_mean": 124.24683573676464,
+      "plan_time_ms_max": 834.6115130007092,
+      "ttc_trades": 0.0,
+      "energy_parts_kj": {
+        "profile": 0.7758313877366083,
+        "induced": 3.1704417351415493,
+        "parasite": 0.0006326524917633911,
+        "climb": 0.043071896604246374,
+        "electronics": 0.160550000000001,
+        "navigation": 0.08644999999999972
+      },
+      "nav_power_w": 3.5,
+      "energy_per_m_j": 269.2860524234138,
+      "loc_final_m": 0.015745646461838778,
+      "sigma_mean_m": 0.025132622807036997,
+      "consistency": 0.9326472256954209,
+      "cam_frames": 247,
+      "cam_fix_pct": 80.97165991902834,
+      "cam_markers_visible_mean": 3.5870445344129553,
+      "cam_markers_used": 640,
+      "longest_no_fix_s": 0.5500000000000007,
+      "peer_updates": 0,
+      "meas_updates": 4013,
+      "meas_rejected": 22,
+      "safety_interventions": 108,
+      "depth_brakes": 54,
+      "hard_brakes": 11,
+      "unknown_known": 3,
+      "min_separation_m": 1.1142854153224446,
+      "min_separation_3d_m": 1.1142931699760208,
+      "min_sep_margin_m": -0.1757145846775554,
+      "wake_time_s": 0.0,
+      "wake_max_ms": 0.0008986016397159311,
+      "drone_contacts": 0
+    },
+    {
+      "id": 5,
+      "name": "drone5",
+      "color": "#0e8fc0",
+      "nav": "cam3_sensor",
+      "nav_label": "Baseline: 3-point camera + VIO",
+      "state": "LANDED",
+      "failed": false,
+      "goal_reached": true,
+      "flight_time_s": 30.250000000000007,
+      "energy_kj": 5.130335181801749,
+      "energy_wh": 1.4250931060560414,
+      "battery_soc": 98.07419850532968,
+      "avg_power_w": 169.59785724964456,
+      "peak_power_w": 464.7088443308726,
+      "distance_m": 28.307364431855408,
+      "horizontal_distance_m": 24.926014116288602,
+      "ref_length_m": 21.700930810208924,
+      "length_ratio": 1.1486149757485278,
+      "cte_rms_m": 4.212053995392048,
+      "track_rms_m": 0.19775727802048845,
+      "track_max_m": 0.6743840229479319,
+      "cte_mean_m": 3.4695306114292888,
+      "cte_max_m": 6.9851828619538585,
+      "on_path_pct": 19.545454545454547,
+      "loc_rms_m": 0.0279974002083087,
+      "loc_max_m": 0.07665432251466171,
+      "landing_err_m": 0.02296972877641355,
+      "replans": 6,
+      "stuck_events": 0,
+      "escapes": 0,
+      "yield_time_s": 0.0,
+      "avoid_time_s": 8.350000000000001,
+      "give_way_s": {
+        "hold": 0.0,
+        "slow": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "up": 0.0,
+        "down": 0.0
+      },
+      "contacts": 0,
+      "max_speed_ms": 1.6927045295760184,
+      "plans": 25,
+      "ref_plan_ms": 57.25036799776717,
+      "plan_time_ms_mean": 151.3348256800964,
+      "plan_time_ms_max": 809.7700979997171,
+      "ttc_trades": 0.0,
+      "energy_parts_kj": {
+        "profile": 0.9503207054990623,
+        "induced": 3.830720882500541,
+        "parasite": 0.0011732241093944445,
+        "climb": 0.04562036969275707,
+        "electronics": 0.1966250000000015,
+        "navigation": 0.10587499999999915
+      },
+      "nav_power_w": 3.5,
+      "energy_per_m_j": 205.82252573022447,
+      "loc_final_m": 0.05618496376199761,
+      "sigma_mean_m": 0.024596683805661816,
+      "consistency": 0.6086214101179084,
+      "cam_frames": 303,
+      "cam_fix_pct": 77.22772277227723,
+      "cam_markers_visible_mean": 3.5907590759075907,
+      "cam_markers_used": 777,
+      "longest_no_fix_s": 0.6500000000000021,
+      "peer_updates": 0,
+      "meas_updates": 4313,
+      "meas_rejected": 45,
+      "safety_interventions": 77,
+      "depth_brakes": 41,
+      "hard_brakes": 9,
+      "unknown_known": 4,
+      "min_separation_m": 1.1020038823109604,
+      "min_separation_3d_m": 1.1020103523082114,
+      "min_sep_margin_m": -0.18799611768903968,
+      "wake_time_s": 0.0,
+      "wake_max_ms": 3.5571970392310163e-06,
+      "drone_contacts": 0
+    }
+  ],
+  "fleet_cte_rms_mean_m": 1.3350974322202798,
+  "fleet_track_rms_mean_m": 0.2266860334942557,
+  "fleet_cte_max_m": 6.9851828619538585,
+  "fleet_on_path_pct_mean": 55.12588256725145,
+  "fleet_landing_err_mean_m": 0.046519862351258254,
+  "fleet_loc_rms_mean_m": 0.03523046728703079,
+  "fleet_loc_max_m": 0.1203721437539688,
+  "fleet_loc_final_mean_m": 0.03365734833746069,
+  "fleet_sigma_mean_m": 0.030687106253724134,
+  "fleet_consistency_mean": 0.7026994180154528,
+  "fleet_cam_fix_pct_mean": 68.45471445883246,
+  "fleet_cam_markers_visible_mean": 3.4168526841676874,
+  "fleet_longest_no_fix_s": 6.75,
+  "fleet_peer_updates": 0.0,
+  "fleet_meas_rejected": 175.0,
+  "fleet_energy_kj": 26.426164029961278,
+  "fleet_peak_power_w": 507.6657147950791,
+  "fleet_nav_power_w": 3.5,
+  "fleet_battery_soc_min": 97.7871897695145,
+  "fleet_flight_time_s": 153.80000000000004,
+  "fleet_distance_m": 112.06177538951822,
+  "fleet_length_ratio_mean": 1.2478560451590806,
+  "fleet_max_speed_ms": 2.141997905904927,
+  "fleet_plans": 121.0,
+  "fleet_plan_time_ms_max": 834.6115130007092,
+  "fleet_replans": 17.0,
+  "fleet_stuck_events": 1.0,
+  "fleet_escapes": 0.0,
+  "fleet_avoid_time_s": 51.898,
+  "fleet_safety_interventions": 652.0,
+  "fleet_contacts": 0.0,
+  "fleet_min_separation_m": 0.9984146750367631,
+  "fleet_min_separation_3d_m": 0.9984279722728326,
+  "fleet_min_sep_margin_m": -0.29158532496323697,
+  "fleet_wake_time_s": 0.0,
+  "fleet_wake_max_ms": 0.0035796248121084673,
+  "fleet_unknown_known_mean": 3.8,
+  "fleet_yield_time_s": 0.0,
+  "fleet_ttc_trades": 0.0,
+  "fleet_goals_reached": 5,
+  "fleet_drone_contacts": 1,
+  "fleet_energy_per_m_j": 235.8178240359475,
+  "fleet_avg_power_w": 171.82161267855182,
+  "fleet_plan_time_ms_mean": 149.04374923165705,
+  "fleet_mission_time_s": 39.050000000000004,
+  "fleet_loc_rms_nocam_mean_m": null,
+  "fleet_give_way_hold_s": 0.0,
+  "fleet_give_way_slow_s": 0.0,
+  "fleet_give_way_left_s": 0.0,
+  "fleet_give_way_right_s": 0.0,
+  "fleet_give_way_up_s": 0.0,
+  "fleet_give_way_down_s": 0.0,
+  "fleet_energy_parts_kj": {
+    "profile": 4.830909019737267,
+    "induced": 19.823360268172213,
+    "parasite": 0.0037827079709356337,
+    "climb": 0.23011203408086958,
+    "electronics": 0.999700000000007,
+    "navigation": 0.5382999999999954
+  },
+  "unknown_obstacles_total": 6,
+  "events": [
+    [
+      0.0,
+      "Navigation: Baseline: 3-point camera + VIO [3-point camera + VIO] for all 5 drones; planner RRT* (reference route: A*, on board before take-off); swarm give-way: turn trading (TTC); seed 2"
+    ],
+    [
+      0.0,
+      "drone1: reference route (A*, before take-off) 25.0 m"
+    ],
+    [
+      0.0,
+      "drone2: reference route (A*, before take-off) 18.6 m"
+    ],
+    [
+      0.0,
+      "drone3: reference route (A*, before take-off) 15.0 m"
+    ],
+    [
+      0.0,
+      "drone4: reference route (A*, before take-off) 11.7 m"
+    ],
+    [
+      0.0,
+      "drone5: reference route (A*, before take-off) 21.7 m"
+    ],
+    [
+      5.0,
+      "drone1: PREVIEW -> TAKEOFF"
+    ],
+    [
+      5.0,
+      "drone2: PREVIEW -> TAKEOFF"
+    ],
+    [
+      5.0,
+      "drone3: PREVIEW -> TAKEOFF"
+    ],
+    [
+      5.0,
+      "drone4: PREVIEW -> TAKEOFF"
+    ],
+    [
+      5.0,
+      "drone5: PREVIEW -> TAKEOFF"
+    ],
+    [
+      7.0,
+      "drone1: TAKEOFF -> SCAN"
+    ],
+    [
+      7.0,
+      "drone2: TAKEOFF -> SCAN"
+    ],
+    [
+      7.0,
+      "drone3: TAKEOFF -> SCAN"
+    ],
+    [
+      7.0,
+      "drone4: TAKEOFF -> SCAN"
+    ],
+    [
+      7.0,
+      "drone5: TAKEOFF -> SCAN"
+    ],
+    [
+      9.7,
+      "drone1: path planned with RRT* (26.4 m, reference 25.0 m)"
+    ],
+    [
+      9.7,
+      "drone1: SCAN -> CRUISE"
+    ],
+    [
+      9.7,
+      "drone2: path planned with RRT* (18.6 m, reference 18.6 m)"
+    ],
+    [
+      9.7,
+      "drone2: SCAN -> CRUISE"
+    ],
+    [
+      9.7,
+      "drone3: path planned with RRT* (15.3 m, reference 15.0 m)"
+    ],
+    [
+      9.7,
+      "drone3: SCAN -> CRUISE"
+    ],
+    [
+      9.7,
+      "drone4: path planned with RRT* (12.4 m, reference 11.7 m)"
+    ],
+    [
+      9.7,
+      "drone4: SCAN -> CRUISE"
+    ],
+    [
+      9.7,
+      "drone5: path planned with RRT* (25.8 m, reference 21.7 m)"
+    ],
+    [
+      9.7,
+      "drone5: SCAN -> CRUISE"
+    ],
+    [
+      10.7,
+      "drone1: re-planned (rolling, shorter), new path 24.4 m"
+    ],
+    [
+      10.7,
+      "drone5: re-planned (rolling, shorter), new path 23.7 m"
+    ],
+    [
+      12.9,
+      "drone4: re-planned (obstacle on path), new path 14.0 m"
+    ],
+    [
+      13.9,
+      "drone4: re-planned (rolling, shorter), new path 9.2 m"
+    ],
+    [
+      14.1,
+      "drone5: re-planned (obstacle on path), new path 18.8 m"
+    ],
+    [
+      14.35,
+      "drone1: re-planned (obstacle on path), new path 20.3 m"
+    ],
+    [
+      15.1,
+      "drone4: re-planned (obstacle on path), new path 9.2 m"
+    ],
+    [
+      16.35,
+      "drone5: re-planned (obstacle on path), new path 16.1 m"
+    ],
+    [
+      18.1,
+      "drone4: re-planned (rolling, shorter), new path 8.3 m"
+    ],
+    [
+      19.1,
+      "drone4: re-planned (rolling, shorter), new path 8.0 m"
+    ],
+    [
+      19.9,
+      "drone5: re-planned (obstacle on path), new path 12.0 m"
+    ],
+    [
+      20.1,
+      "drone4: re-planned (rolling, shorter), new path 8.0 m"
+    ],
+    [
+      20.3,
+      "drone5: re-planned (obstacle on path), new path 12.1 m"
+    ],
+    [
+      20.45,
+      "!! drone2 and drone3 touched (rotor discs overlap)"
+    ],
+    [
+      22.3,
+      "drone5: re-planned (rolling, shorter), new path 11.9 m"
+    ],
+    [
+      24.15,
+      "drone2: re-planned (no progress), new path 12.7 m"
+    ],
+    [
+      26.1,
+      "drone2: re-planned (obstacle on path), new path 11.5 m"
+    ],
+    [
+      26.15,
+      "drone4: CRUISE -> LANDING"
+    ],
+    [
+      27.35,
+      "drone1: re-planned (rolling, shorter), new path 9.4 m"
+    ],
+    [
+      29.7,
+      "drone4: LANDING -> LANDED"
+    ],
+    [
+      29.7,
+      "drone4: LANDED, landing error 0.07 m"
+    ],
+    [
+      31.7,
+      "drone5: CRUISE -> LANDING"
+    ],
+    [
+      32.85,
+      "drone3: CRUISE -> LANDING"
+    ],
+    [
+      34.7,
+      "drone1: CRUISE -> LANDING"
+    ],
+    [
+      35.25,
+      "drone5: LANDING -> LANDED"
+    ],
+    [
+      35.25,
+      "drone5: LANDED, landing error 0.02 m"
+    ],
+    [
+      35.45,
+      "drone2: CRUISE -> LANDING"
+    ],
+    [
+      36.55,
+      "drone3: LANDING -> LANDED"
+    ],
+    [
+      36.55,
+      "drone3: LANDED, landing error 0.06 m"
+    ],
+    [
+      38.3,
+      "drone1: LANDING -> LANDED"
+    ],
+    [
+      38.3,
+      "drone1: LANDED, landing error 0.01 m"
+    ],
+    [
+      39.0,
+      "drone2: LANDING -> LANDED"
+    ],
+    [
+      39.0,
+      "drone2: LANDED, landing error 0.07 m"
+    ],
+    [
+      39.05,
+      "All drones landed - mission report generated."
+    ]
+  ],
+  "rtf_last": 0.21678539055296106,
+  "wall_time_s": 180.273686170578,
+  "final": true,
+  "source": "gazebo",
+  "_run": "cam3_sensor_20261120_105715",
+  "gui": false,
+  "study_run": true,
+  "baseline": {
+    "model_version": "2026.11-fleet.3",
+    "nav": "cam3_sensor",
+    "nav_label": "Baseline: 3-point camera + VIO",
+    "nav_parts": "3-point camera + VIO",
+    "fleet_navs": [
+      "cam3_sensor",
+      "cam3_sensor",
+      "cam3_sensor",
+      "cam3_sensor",
+      "cam3_sensor"
+    ],
+    "layout": 0,
+    "wind_mean_ms": 0.2,
+    "seed": 1,
+    "speed_scale": 1.0,
+    "mission_time_s": 39.25000000000001,
+    "all_landed_at_s": 39.25000000000001,
+    "reference_paths": {
+      "1": [
+        [
+          -8.0,
+          -8.0
+        ],
+        [
+          -5.1,
+          -5.7
+        ],
+        [
+          2.700000000000001,
+          1.3000000000000007
+        ],
+        [
+          3.5,
+          1.3000000000000007
+        ],
+        [
+          8.3,
+          3.700000000000001
+        ],
+        [
+          8.7,
+          4.700000000000001
+        ],
+        [
+          8.3,
+          7.900000000000002
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "2": [
+        [
+          -5.0,
+          5.0
+        ],
+        [
+          3.1000000000000014,
+          -1.0999999999999996
+        ],
+        [
+          6.0,
+          -9.0
+        ]
+      ],
+      "3": [
+        [
+          5.0,
+          -5.0
+        ],
+        [
+          2.700000000000001,
+          -0.6999999999999993
+        ],
+        [
+          -5.1,
+          4.100000000000001
+        ],
+        [
+          -6.0,
+          4.5
+        ]
+      ],
+      "4": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -5.8999999999999995,
+          -6.5
+        ],
+        [
+          -7.1,
+          -6.699999999999999
+        ],
+        [
+          -8.8,
+          -6.8
+        ]
+      ],
+      "5": [
+        [
+          6.0,
+          6.0
+        ],
+        [
+          5.9,
+          6.300000000000001
+        ],
+        [
+          5.9,
+          6.5
+        ],
+        [
+          7.100000000000001,
+          6.699999999999999
+        ],
+        [
+          8.100000000000001,
+          6.5
+        ],
+        [
+          8.5,
+          5.9
+        ],
+        [
+          8.7,
+          5.100000000000001
+        ],
+        [
+          8.5,
+          3.9000000000000004
+        ],
+        [
+          -1.299999999999999,
+          -8.7
+        ],
+        [
+          -1.5,
+          -8.8
+        ]
+      ]
+    },
+    "planner": "rrtstar",
+    "give_way": "ttc",
+    "fleet_cte_rms_mean_m": 0.6681953225426306,
+    "fleet_track_rms_mean_m": 0.15996436630544214,
+    "fleet_cte_max_m": 2.2163376522584057,
+    "fleet_on_path_pct_mean": 59.71333044471892,
+    "fleet_landing_err_mean_m": 0.03503503309828387,
+    "fleet_loc_rms_mean_m": 0.032979174761991706,
+    "fleet_loc_max_m": 0.10336552646421038,
+    "fleet_loc_final_mean_m": 0.02475163375352687,
+    "fleet_sigma_mean_m": 0.02759465803084827,
+    "fleet_consistency_mean": 0.6995695989903608,
+    "fleet_cam_fix_pct_mean": 73.79846847006233,
+    "fleet_cam_markers_visible_mean": 3.478619349637887,
+    "fleet_longest_no_fix_s": 2.3500000000000005,
+    "fleet_peer_updates": 0.0,
+    "fleet_meas_rejected": 123.0,
+    "fleet_energy_kj": 23.323219837793587,
+    "fleet_peak_power_w": 383.86628848098445,
+    "fleet_nav_power_w": 3.5,
+    "fleet_battery_soc_min": 97.81696044342013,
+    "fleet_flight_time_s": 136.79,
+    "fleet_distance_m": 99.5668067530938,
+    "fleet_length_ratio_mean": 1.0909567058040044,
+    "fleet_max_speed_ms": 1.6995660774118042,
+    "fleet_plans": 101.0,
+    "fleet_plan_time_ms_max": 712.332872000843,
+    "fleet_replans": 17.0,
+    "fleet_stuck_events": 0.0,
+    "fleet_escapes": 0.0,
+    "fleet_avoid_time_s": 26.296000000000003,
+    "fleet_safety_interventions": 425.0,
+    "fleet_contacts": 0.0,
+    "fleet_min_separation_m": 1.0803171196888404,
+    "fleet_min_separation_3d_m": 1.0803171821863835,
+    "fleet_min_sep_margin_m": -0.20968288031115967,
+    "fleet_wake_time_s": 0.0,
+    "fleet_wake_max_ms": 0.0026726318743542274,
+    "fleet_unknown_known_mean": 3.2,
+    "fleet_yield_time_s": 0.0,
+    "fleet_ttc_trades": 0.0,
+    "fleet_goals_reached": 5,
+    "fleet_drone_contacts": 0,
+    "fleet_energy_per_m_j": 234.24694030441898,
+    "fleet_avg_power_w": 170.5038368140477,
+    "fleet_plan_time_ms_mean": 134.1642045642429,
+    "fleet_mission_time_s": 39.25000000000001,
+    "fleet_loc_rms_nocam_mean_m": null,
+    "fleet_give_way_hold_s": 0.0,
+    "fleet_give_way_slow_s": 0.0,
+    "fleet_give_way_left_s": 0.0,
+    "fleet_give_way_right_s": 0.0,
+    "fleet_give_way_up_s": 0.0,
+    "fleet_give_way_down_s": 0.0,
+    "fleet_energy_parts_kj": {
+      "profile": 4.296824138981743,
+      "induced": 17.43352569228857,
+      "parasite": 0.002958473524773487,
+      "climb": 0.22191153299850283,
+      "electronics": 0.8892000000000067,
+      "navigation": 0.47879999999999695
+    },
+    "unknown_obstacles_total": 6,
+    "rtf_last": 0.21330753591315205,
+    "wall_time_s": 175.99574422836304,
+    "final": true,
+    "source": "gazebo",
+    "_run": "cam3_sensor_20261120_101117",
+    "gui": false,
+    "study_run": true
+  }
+}

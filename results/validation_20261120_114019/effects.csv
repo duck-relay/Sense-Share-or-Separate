@@ -1,0 +1,12 @@
+config,seeds,fleet_energy_kj change % gazebo,fleet_energy_kj change % headless,fleet_flight_time_s change % gazebo,fleet_flight_time_s change % headless,fleet_track_rms_mean_m change % gazebo,fleet_track_rms_mean_m change % headless,fleet_loc_rms_mean_m change % gazebo,fleet_loc_rms_mean_m change % headless
+cam2,3,4.80,2.42,4.97,2.34,13.79,20.49,52.45,53.48
+sensor,3,-3.04,-4.83,-1.13,-3.07,64.08,78.39,915.10,853.93
+swarm,3,76.55,117.35,78.18,117.65,2327.36,2308.66,17146.19,15496.41
+cam2_sensor,3,2.57,-0.76,2.69,-0.72,-4.15,0.72,4.14,1.51
+cam2_swarm,3,-2.10,-1.18,-2.20,-1.77,11.24,43.30,56.56,51.13
+sensor_swarm,3,-1.48,2.16,-0.49,2.76,92.23,122.60,934.14,906.62
+all,3,-1.04,1.73,-1.52,0.83,21.60,58.14,2.39,-3.86
+cam3,3,-2.06,-5.10,-1.27,-4.50,12.86,-17.57,193.68,72.11
+cam3_swarm,3,-1.22,1.71,-1.29,1.08,40.30,52.19,51.26,51.42
+cam3_sensor_swarm,3,-2.88,0.03,-3.36,-0.88,12.01,23.01,-2.69,-8.59
+cam3_sensor_layers,3,27.68,19.00,26.46,18.37,29.68,23.21,10.86,1.55

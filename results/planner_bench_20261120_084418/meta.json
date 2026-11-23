@@ -1,0 +1,23 @@
+{
+  "model_version": "2026.11-fleet.3",
+  "package_version": "1.8.4",
+  "planner": "rrtstar",
+  "give_way": "ttc",
+  "openblas_coretype": "Prescott",
+  "numpy": "1.26.4",
+  "python": "3.10.12",
+  "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
+  "created": "2026-11-20T08:44:18",
+  "kind": "planner_bench",
+  "fields_m": [
+    20,
+    40,
+    80
+  ],
+  "cells_m": [
+    0.2,
+    0.1,
+    0.05
+  ],
+  "forests": 10
+}

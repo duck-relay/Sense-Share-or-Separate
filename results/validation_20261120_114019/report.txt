@@ -1,0 +1,50 @@
+====================================================================================================================================
+ VALIDATION: Gazebo vs the headless simulator on the same missions (same configuration, seed, forest, speed)
+ 36 paired runs of 12 configurations, package 2026.11-fleet.3, planner rrtstar, give-way ttc
+====================================================================================================================================
+ 1) ALL RUNS
+ metric                                Gazebo  headless      diff   diff %  median %  Pearson r  Spearman r  rho configs
+ Flight energy (kJ)                    26.261    26.087    +0.175    +0.7%     +3.2%       0.87        0.35         0.73
+ Flight time (s)                      154.222   153.524    +0.698    +0.5%     +3.2%       0.88        0.39         0.64
+ Mission time (s)                      43.876    44.624    -0.747    -1.7%     +1.8%       0.89        0.40         0.65
+ Path deviation RMS, mean (m)           1.443     1.307    +0.136   +10.4%     +5.0%       0.90        0.81         0.53
+ Tracking error RMS, mean (m)           0.569     0.529    +0.040    +7.5%     -1.2%       0.89        0.70         0.83
+ Position error RMS, mean (m)           0.597     0.541    +0.055   +10.2%     +3.9%       0.96        0.95         0.97
+ Landing error, mean (m)                0.989     0.714    +0.274   +38.4%     +9.1%       0.94        0.76         0.96
+ Closest pair, 3-D (m)                  1.371     1.387    -0.016    -1.2%     -2.3%       0.89        0.84         0.83
+ Separation margin (m)                  0.012     0.007    +0.005        -         -       0.76        0.79         0.80
+ Time in downwash (s)                   0.025     0.028    -0.003        -         -       0.10        0.44         0.60
+
+ 2) WITHOUT CONFIGURATIONS THAT LOSE THEIR POSITION IN BOTH SIMULATORS (mean position error > 1 m): swarm
+ metric                                Gazebo  headless      diff   diff %  median %  Pearson r  Spearman r  rho configs
+ Flight energy (kJ)                    24.751    23.816    +0.935    +3.9%     +3.4%       0.61        0.16         0.65
+ Flight time (s)                      145.201   140.115    +5.086    +3.6%     +3.4%       0.62        0.21         0.53
+ Mission time (s)                      41.150    39.598    +1.552    +3.9%     +2.4%       0.26        0.22         0.55
+ Path deviation RMS, mean (m)           1.257     1.155    +0.102    +8.9%     +3.3%       0.76        0.75         0.39
+ Tracking error RMS, mean (m)           0.226     0.222    +0.004    +2.0%     +1.1%       0.67        0.62         0.77
+ Position error RMS, mean (m)           0.105     0.097    +0.008    +7.9%     +4.1%       0.98        0.94         0.96
+ Landing error, mean (m)                0.158     0.152    +0.006    +4.2%     +8.1%       1.00        0.69         0.95
+ Closest pair, 3-D (m)                  1.396     1.416    -0.019    -1.4%     -2.4%       0.89        0.83         0.87
+ Separation margin (m)                  0.031     0.067    -0.036        -         -       0.88        0.84         0.87
+ Time in downwash (s)                   0.027     0.009    +0.018        -         -       0.33        0.67         1.00
+
+ 3) EFFECT OF EACH CONFIGURATION vs THE BASELINE (change in %, paired by seed)   Gazebo | headless
+ configuration              seeds                  Energy             Flight time          Tracking error          Position error
+ cam2                           3               +5% | +2%               +5% | +2%             +14% | +20%             +52% | +53%
+ sensor                         3               -3% | -5%               -1% | -3%             +64% | +78%             x10 | +854%
+ swarm (lost)                   3            +77% | +117%            +78% | +118%               x24 | x24             x172 | x156
+ cam2_sensor                    3               +3% | -1%               +3% | -1%               -4% | +1%               +4% | +2%
+ cam2_swarm                     3               -2% | -1%               -2% | -2%             +11% | +43%             +57% | +51%
+ sensor_swarm                   3               -1% | +2%               -0% | +3%            +92% | +123%               x10 | x10
+ all                            3               -1% | +2%               -2% | +1%             +22% | +58%               +2% | -4%
+ cam3                           3               -2% | -5%               -1% | -4%             +13% | -18%            +194% | +72%
+ cam3_swarm                     3               -1% | +2%               -1% | +1%             +40% | +52%             +51% | +51%
+ cam3_sensor_swarm              3               -3% | +0%               -3% | -1%             +12% | +23%               -3% | -9%
+ cam3_sensor_layers             3             +28% | +19%             +26% | +18%             +30% | +23%              +11% | +2%
+ agreement (without lost)                rho 0.73, 2.9 pp        rho 0.55, 2.6 pp       rho 0.76, 13.1 pp        rho 0.96, 6.1 pp
+ same sign (effects > 2 %)                         5 of 8                  6 of 8                 8 of 10                 9 of 10
+
+ Reading it: diff % of a few % and rho close to 1 mean the fast simulator can stand in for Gazebo.
+ Section 3 is what the study's conclusions rest on: does Gazebo show the same change vs the baseline?
+ pp = median |Gazebo - headless| in percentage points. With few seeds, small effects (< ~5 %) are within noise.
+====================================================================================================================================

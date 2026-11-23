@@ -1,0 +1,24 @@
+\begin{table}[t]
+\caption{The configurations, flown by all five drones alike. C$n$: marker camera needing $n$ markers per fix; V: visual-inertial odometry; W: radio with turn trading; L: altitude layers. $P_\mathrm{nav}$: power of these components, on top of the 6.5\,W every drone draws.}
+\label{tab:configs}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccr@{}}
+\toprule
+Configuration & Camera & Odometry & Keeping apart & $P_\mathrm{nav}$ (W)\\
+\midrule
+C3+V (baseline) & 3 markers & yes & -- & 3.5\\
+C3 & 3 markers & -- & -- & 2.5\\
+C2 & 2 markers & -- & -- & 2.5\\
+C2+V & 2 markers & yes & -- & 3.5\\
+V & -- & yes & -- & 1.0\\
+C3+V+L & 3 markers & yes & altitude layers & 3.5\\
+C3+V+W & 3 markers & yes & radio & 6.0\\
+C3+W & 3 markers & -- & radio & 5.0\\
+C2+W & 2 markers & -- & radio & 5.0\\
+C2+V+W & 2 markers & yes & radio & 6.0\\
+V+W & -- & yes & radio & 3.5\\
+W & -- & -- & radio & 2.5\\
+\bottomrule
+\end{tabular}
+\end{table}

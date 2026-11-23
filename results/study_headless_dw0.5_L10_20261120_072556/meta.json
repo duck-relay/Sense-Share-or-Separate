@@ -1,0 +1,19 @@
+{
+  "model_version": "2026.11-fleet.3",
+  "package_version": "1.8.4",
+  "planner": "rrtstar",
+  "give_way": "ttc",
+  "openblas_coretype": "Prescott",
+  "numpy": "1.26.4",
+  "python": "3.10.12",
+  "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
+  "created": "2026-11-20T07:25:56",
+  "kind": "study",
+  "source": "Headless simulation (same mission code, no GUI)",
+  "missions": "10 forest layouts x 6 seeds x 3 configs, camera 360 deg, planner RRT*, give-way turn trading (TTC), wind 0.2 m/s, downwash x0.5, speed x1.0, package 2026.11-fleet.3",
+  "configurations": [
+    "cam3_sensor",
+    "cam3_sensor_layers",
+    "cam3_sensor_swarm"
+  ]
+}

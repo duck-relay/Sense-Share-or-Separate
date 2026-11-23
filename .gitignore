@@ -1,0 +1,20 @@
+# colcon
+/build/
+/install/
+/log/
+
+# manuscript (kept out of the repository)
+/paper/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# editors and operating systems
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

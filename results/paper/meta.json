@@ -1,0 +1,32 @@
+{
+  "model_version": "2026.11-fleet.3",
+  "package_version": "1.8.5",
+  "planner": "rrtstar",
+  "give_way": "ttc",
+  "openblas_coretype": "Prescott",
+  "numpy": "2.5.3",
+  "python": "3.13.18",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "created": "2026-11-22T08:59:43",
+  "kind": "paper",
+  "sources": {
+    "main": "study_headless_L10_20261120_040523",
+    "cam80": "study_headless_cam80_L10_20261120_061214",
+    "mixed": "study_headless_mixed_L10_20261120_050259",
+    "wind": [
+      "study_headless_wind0.5_L5_20261120_064012",
+      "study_headless_wind0_L5_20261120_062508",
+      "study_headless_wind1.5_L5_20261120_071244",
+      "study_headless_wind1_L5_20261120_065534"
+    ],
+    "validation": "validation_20261120_114019",
+    "robustness": [
+      "study_headless_dw0.5_L10_20261120_072556",
+      "study_headless_gap1.5_L10_20261120_075210",
+      "study_headless_gap1_L10_20261120_073852"
+    ],
+    "planner": "study_headless_astar_L10_20261120_081411",
+    "giveway": "study_headless_priority_L10_20261120_084413"
+  },
+  "left_out": []
+}

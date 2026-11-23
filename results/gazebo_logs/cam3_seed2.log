@@ -1,0 +1,203 @@
+[INFO] [launch]: All log files can be found below /home/drone/.ros/log/2026-11-20-11-24-51-116707-drone-17427
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [swarm_intel] 3-point camera [3-point camera] for all 5 drones  planner=rrtstar  give_way=ttc  world=/home/drone/.ros/swarm_intel/swarm_arena_cam3.world  gui=False  paused=False  lines=False  partition=swarm_intel_17427
+[INFO] [gazebo-1]: process started with pid [17429]
+[INFO] [parameter_bridge-2]: process started with pid [17431]
+[INFO] [world_node-3]: process started with pid [17433]
+[INFO] [drone_node-4]: process started with pid [17435]
+[INFO] [drone_node-5]: process started with pid [17437]
+[INFO] [drone_node-6]: process started with pid [17439]
+[INFO] [drone_node-7]: process started with pid [17441]
+[INFO] [drone_node-8]: process started with pid [17443]
+[parameter_bridge-2] [INFO] [1795154091.471603164] [swarm_bridge]: Creating GZ->ROS Bridge: [/clock (ignition.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.473273195] [swarm_bridge]: Creating ROS->GZ Bridge: [/model/drone1/cmd_vel (geometry_msgs/msg/Twist) -> /model/drone1/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.489157397] [swarm_bridge]: Creating GZ->ROS Bridge: [/model/drone1/odometry (ignition.msgs.Odometry) -> /model/drone1/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.490841346] [swarm_bridge]: Creating ROS->GZ Bridge: [/model/drone2/cmd_vel (geometry_msgs/msg/Twist) -> /model/drone2/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.492818612] [swarm_bridge]: Creating GZ->ROS Bridge: [/model/drone2/odometry (ignition.msgs.Odometry) -> /model/drone2/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.493647619] [swarm_bridge]: Creating ROS->GZ Bridge: [/model/drone3/cmd_vel (geometry_msgs/msg/Twist) -> /model/drone3/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.494600905] [swarm_bridge]: Creating GZ->ROS Bridge: [/model/drone3/odometry (ignition.msgs.Odometry) -> /model/drone3/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.495360135] [swarm_bridge]: Creating ROS->GZ Bridge: [/model/drone4/cmd_vel (geometry_msgs/msg/Twist) -> /model/drone4/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.497704400] [swarm_bridge]: Creating GZ->ROS Bridge: [/model/drone4/odometry (ignition.msgs.Odometry) -> /model/drone4/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.498485510] [swarm_bridge]: Creating ROS->GZ Bridge: [/model/drone5/cmd_vel (geometry_msgs/msg/Twist) -> /model/drone5/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795154091.499937243] [swarm_bridge]: Creating GZ->ROS Bridge: [/model/drone5/odometry (ignition.msgs.Odometry) -> /model/drone5/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[drone_node-4] [INFO] [1795154092.727809626] [drone1]: drone1: on-board computer up (3-point camera; planner rrtstar, give-way ttc)
+[drone_node-8] [INFO] [1795154092.728908241] [drone5]: drone5: on-board computer up (3-point camera; planner rrtstar, give-way ttc)
+[drone_node-5] [INFO] [1795154093.216065209] [drone2]: drone2: on-board computer up (3-point camera; planner rrtstar, give-way ttc)
+[drone_node-6] [INFO] [1795154093.221407741] [drone3]: drone3: on-board computer up (3-point camera; planner rrtstar, give-way ttc)
+[drone_node-7] [INFO] [1795154093.343406909] [drone4]: drone4: on-board computer up (3-point camera; planner rrtstar, give-way ttc)
+[world_node-3] [INFO] [1795154094.946626764] [swarm_world]: [t=  0.00s] Navigation: 3-point camera [3-point camera] for all 5 drones; planner RRT* (reference route: A*, on board before take-off); swarm give-way: turn trading (TTC); seed 2
+[world_node-3] [INFO] [1795154094.947106366] [swarm_world]: World node up: results -> /media/sf_swarm_ws/results/cam3_20261120_112454
+[world_node-3] [INFO] [1795154094.947420371] [swarm_world]: Waiting for /clock and /model/droneX/odometry from Gazebo ...
+[parameter_bridge-2] [INFO] [1795154094.962083624] [swarm_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[drone_node-7] [INFO] [1795154094.975847934] [drone4]: [t=  0.00s] drone4: reference route (A*, before take-off) 11.7 m
+[drone_node-8] [INFO] [1795154094.981528421] [drone5]: [t=  0.00s] drone5: reference route (A*, before take-off) 21.7 m
+[drone_node-6] [INFO] [1795154094.986014336] [drone3]: [t=  0.00s] drone3: reference route (A*, before take-off) 15.0 m
+[drone_node-5] [INFO] [1795154094.996404294] [drone2]: [t=  0.00s] drone2: reference route (A*, before take-off) 18.6 m
+[drone_node-4] [INFO] [1795154095.007884013] [drone1]: [t=  0.00s] drone1: reference route (A*, before take-off) 25.0 m
+[drone_node-5] [INFO] [1795154117.370986066] [drone2]: [t=  5.00s] drone2: PREVIEW -> TAKEOFF
+[drone_node-6] [INFO] [1795154117.385150075] [drone3]: [t=  5.00s] drone3: PREVIEW -> TAKEOFF
+[drone_node-7] [INFO] [1795154117.396539177] [drone4]: [t=  5.00s] drone4: PREVIEW -> TAKEOFF
+[drone_node-4] [INFO] [1795154117.401901123] [drone1]: [t=  5.00s] drone1: PREVIEW -> TAKEOFF
+[drone_node-8] [INFO] [1795154117.403629576] [drone5]: [t=  5.00s] drone5: PREVIEW -> TAKEOFF
+[drone_node-7] [INFO] [1795154125.851621931] [drone4]: [t=  7.00s] drone4: TAKEOFF -> SCAN
+[drone_node-4] [INFO] [1795154125.851806029] [drone1]: [t=  7.00s] drone1: TAKEOFF -> SCAN
+[drone_node-6] [INFO] [1795154125.852814810] [drone3]: [t=  7.00s] drone3: TAKEOFF -> SCAN
+[drone_node-5] [INFO] [1795154125.853081767] [drone2]: [t=  7.00s] drone2: TAKEOFF -> SCAN
+[drone_node-8] [INFO] [1795154125.853963946] [drone5]: [t=  7.00s] drone5: TAKEOFF -> SCAN
+[drone_node-7] [INFO] [1795154137.516985149] [drone4]: [t=  9.70s] drone4: path planned with RRT* (12.2 m, reference 11.7 m)
+[drone_node-5] [INFO] [1795154137.519117101] [drone2]: [t=  9.70s] drone2: path planned with RRT* (18.5 m, reference 18.6 m)
+[drone_node-6] [INFO] [1795154137.522994931] [drone3]: [t=  9.70s] drone3: path planned with RRT* (15.2 m, reference 15.0 m)
+[drone_node-6] [INFO] [1795154137.525810654] [drone3]: [t=  9.70s] drone3: SCAN -> CRUISE
+[drone_node-8] [INFO] [1795154137.523575883] [drone5]: [t=  9.70s] drone5: path planned with RRT* (25.8 m, reference 21.7 m)
+[drone_node-5] [INFO] [1795154137.532239251] [drone2]: [t=  9.70s] drone2: SCAN -> CRUISE
+[drone_node-7] [INFO] [1795154137.540463255] [drone4]: [t=  9.70s] drone4: SCAN -> CRUISE
+[drone_node-8] [INFO] [1795154137.568066551] [drone5]: [t=  9.70s] drone5: SCAN -> CRUISE
+[drone_node-4] [INFO] [1795154137.860762819] [drone1]: [t=  9.75s] drone1: path planned with RRT* (26.6 m, reference 25.0 m)
+[drone_node-4] [INFO] [1795154137.864426669] [drone1]: [t=  9.75s] drone1: SCAN -> CRUISE
+[drone_node-8] [INFO] [1795154141.838830010] [drone5]: [t= 10.70s] drone5: re-planned (rolling, shorter), new path 23.8 m
+[drone_node-4] [INFO] [1795154141.840323645] [drone1]: [t= 10.70s] drone1: re-planned (rolling, shorter), new path 24.5 m
+[drone_node-7] [INFO] [1795154149.734720202] [drone4]: [t= 12.50s] drone4: re-planned (obstacle on path), new path 10.0 m
+[drone_node-7] [INFO] [1795154152.741252480] [drone4]: [t= 13.10s] drone4: re-planned (obstacle on path), new path 9.4 m
+[drone_node-8] [INFO] [1795154155.366695320] [drone5]: [t= 13.70s] drone5: re-planned (rolling, shorter), new path 19.2 m
+[drone_node-4] [INFO] [1795154156.502629646] [drone1]: [t= 13.95s] drone1: re-planned (obstacle on path), new path 22.9 m
+[drone_node-7] [INFO] [1795154157.120419964] [drone4]: [t= 14.10s] drone4: re-planned (rolling, shorter), new path 8.1 m
+[drone_node-8] [INFO] [1795154158.002446439] [drone5]: [t= 14.30s] drone5: re-planned (obstacle on path), new path 18.8 m
+[drone_node-4] [INFO] [1795154161.068648785] [drone1]: [t= 14.95s] drone1: re-planned (rolling, shorter), new path 20.4 m
+[drone_node-8] [INFO] [1795154165.862569374] [drone5]: [t= 15.90s] drone5: re-planned (obstacle on path), new path 17.2 m
+[drone_node-5] [INFO] [1795154179.852643826] [drone2]: [t= 18.75s] drone2: re-planned (rolling, shorter), new path 12.4 m
+[drone_node-8] [INFO] [1795154186.007437010] [drone5]: [t= 20.10s] drone5: re-planned (obstacle on path), new path 11.9 m
+[drone_node-7] [INFO] [1795154186.911859763] [drone4]: [t= 20.45s] drone4: CRUISE -> LANDING
+[drone_node-8] [INFO] [1795154187.100936058] [drone5]: [t= 20.50s] drone5: re-planned (obstacle on path), new path 11.7 m
+[drone_node-8] [INFO] [1795154191.959698471] [drone5]: [t= 21.50s] drone5: re-planned (rolling, shorter), new path 10.5 m
+[drone_node-5] [INFO] [1795154193.000910790] [drone2]: [t= 21.70s] drone2: re-planned (rolling, shorter), new path 12.8 m
+[drone_node-6] [INFO] [1795154202.636988052] [drone3]: [t= 23.75s] drone3: re-planned (no progress), new path 9.2 m
+[drone_node-4] [INFO] [1795154203.705263151] [drone1]: [t= 23.95s] drone1: re-planned (rolling, shorter), new path 11.1 m
+[drone_node-7] [INFO] [1795154204.263624942] [drone4]: [t= 24.10s] drone4: LANDING -> LANDED
+[drone_node-7] [INFO] [1795154204.264296105] [drone4]: [t= 24.10s] drone4: LANDED, landing error 0.07 m
+[drone_node-5] [INFO] [1795154207.922399733] [drone2]: [t= 24.80s] drone2: re-planned (rolling, shorter), new path 11.5 m
+[drone_node-5] [INFO] [1795154209.235117845] [drone2]: [t= 25.10s] drone2: re-planned (obstacle on path), new path 11.4 m
+[drone_node-5] [INFO] [1795154213.120437944] [drone2]: [t= 25.90s] drone2: re-planned (obstacle on path), new path 11.0 m
+[drone_node-6] [INFO] [1795154216.496247182] [drone3]: [t= 26.70s] drone3: re-planned (rolling, shorter), new path 7.2 m
+[drone_node-4] [INFO] [1795154217.644787842] [drone1]: [t= 26.95s] drone1: re-planned (rolling, shorter), new path 7.2 m
+[drone_node-8] [INFO] [1795154230.061989307] [drone5]: [t= 29.80s] drone5: CRUISE -> LANDING
+[drone_node-6] [INFO] [1795154240.882072026] [drone3]: [t= 32.35s] drone3: CRUISE -> LANDING
+[drone_node-4] [INFO] [1795154241.919953607] [drone1]: [t= 32.50s] drone1: CRUISE -> LANDING
+[drone_node-8] [INFO] [1795154246.635172396] [drone5]: [t= 33.35s] drone5: LANDING -> LANDED
+[drone_node-8] [INFO] [1795154246.636776252] [drone5]: [t= 33.35s] drone5: LANDED, landing error 0.06 m
+[drone_node-5] [INFO] [1795154250.749047498] [drone2]: [t= 34.40s] drone2: CRUISE -> LANDING
+[drone_node-6] [INFO] [1795154258.155853449] [drone3]: [t= 36.10s] drone3: LANDING -> LANDED
+[drone_node-6] [INFO] [1795154258.157768282] [drone3]: [t= 36.10s] drone3: LANDED, landing error 0.07 m
+[drone_node-4] [INFO] [1795154258.846807929] [drone1]: [t= 36.30s] drone1: LANDING -> LANDED
+[drone_node-4] [INFO] [1795154258.847480054] [drone1]: [t= 36.30s] drone1: LANDED, landing error 0.05 m
+[drone_node-5] [INFO] [1795154266.511804179] [drone2]: [t= 38.05s] drone2: LANDING -> LANDED
+[drone_node-5] [INFO] [1795154266.513157677] [drone2]: [t= 38.05s] drone2: LANDED, landing error 0.07 m
+[world_node-3] [INFO] [1795154266.685255868] [swarm_world]: [t= 38.10s] All drones landed - mission report generated.
+[world_node-3] 
+[world_node-3] [38;5;51m╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗[0m
+[world_node-3] [38;5;51m║[0m[1m                MISSION OVERVIEW — FLEET OF 5 — 5 OF 5 AT THEIR GOAL — 3-point camera                 [0m[38;5;51m║[0m
+[world_node-3] [38;5;51m╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝[0m
+[world_node-3]   Navigation        : 3-point camera   (config 'cam3', all 5 drones, planner RRT*, give-way ttc, wind 0.20 m/s, seed 2)
+[world_node-3] [38;5;245m  Estimator         : one EKF per drone fuses IMU (gyro + heading) + ToF altimeter + 3-point camera[0m
+[world_node-3]   Result            : [38;5;77m5 of 5 drones reached their goal, 5 landed[0m   fleet energy 24.14 kJ, mission time 38.1 s
+[world_node-3] [38;5;245m  Baseline          : 3-point camera + VIO  (cam3_sensor_20261120_105715)[0m
+[world_node-3] 
+[world_node-3] [1m  ACCURACY (ground truth vs each drone's reference route: A* on board before take-off, green in Gazebo)[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Drones that reached their goal                 #/5           5           5       ±0%   [38;5;245m= same[0m
+[world_node-3]     Path deviation RMS (mean of the drones)          m       1.237       1.335       -7%   [38;5;77m▲ better[0m
+[world_node-3]     Tracking error RMS vs own plan (mean)            m       0.214       0.227       -6%   [38;5;77m▲ better[0m
+[world_node-3]     Path deviation max (worst drone)                 m       6.596       6.985       -6%   [38;5;77m▲ better[0m
+[world_node-3]     Cruise within ±0.5 m of route (mean)             %        55.8        55.1       +1%   [38;5;245m= same[0m
+[world_node-3]     Landing error (mean)                             m       0.064       0.047      +38%   [38;5;203m▼ worse[0m
+[world_node-3] 
+[world_node-3] [1m  LOCALISATION (estimate vs truth)[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Position error RMS (mean of the drones)          m       0.178       0.035     +406%   [38;5;203m▼ worse[0m
+[world_node-3]     Position error max (worst drone)                 m       1.925       0.120       ×16   [38;5;203m▼ worse[0m
+[world_node-3]     Position error at touchdown (mean)               m       0.044       0.034      +32%   [38;5;203m▼ worse[0m
+[world_node-3]     Reported uncertainty 1-sigma (mean)              m       0.079       0.031     +159%   
+[world_node-3]     EKF consistency NEES/2 (mean; 1 = honest)        x        0.85        0.70      +21%   
+[world_node-3]     Camera frames with an N-point fix (mean)         %        68.7        68.5       ±0%   
+[world_node-3]     Markers visible per frame (mean)                 #        3.39        3.42       -1%   
+[world_node-3]     Longest gap without camera fix (any drone)       s         9.7         6.8      +43%   
+[world_node-3]     Swarm peer-range updates used                    #           0           0        ±0   
+[world_node-3]     Camera/peer outliers rejected by the EKFs        #         156         175      -11%   
+[world_node-3] 
+[world_node-3] [1m  ENERGY (all 5 drones)[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Flight energy, all drones                       kJ      24.144      26.426       -9%   [38;5;77m▲ better[0m
+[world_node-3]     Energy per metre flown                         J/m       241.2       235.8       +2%   [38;5;203m▼ worse[0m
+[world_node-3]     Average power per drone                          W       169.0       171.8       -2%   
+[world_node-3]     Peak power (any drone)                           W       421.3       507.7      -17%   [38;5;77m▲ better[0m
+[world_node-3]     Navigation electronics power per drone           W         2.5         3.5      -29%   
+[world_node-3]     Battery left (lowest drone)                      %       97.90       97.79       ±0%   
+[world_node-3] [38;5;245m    energy split: [0mprofile 19% | induced 75% | parasite 0% | climb 1% | electronics 4% | navigation 1%
+[world_node-3] 
+[world_node-3] [1m  TIME & PATH[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Flight time, all drones                          s       142.9       153.8       -7%   [38;5;77m▲ better[0m
+[world_node-3]     Mission time (until the last drone landed)       s        38.1        39.1       -2%   [38;5;77m▲ better[0m
+[world_node-3]     Distance flown, all drones                       m       100.1       112.1      -11%   [38;5;77m▲ better[0m
+[world_node-3]     Flown / reference route length (mean)            x       1.091       1.248      -13%   
+[world_node-3]     Max speed (any drone)                          m/s        1.76        2.14      -18%   
+[world_node-3]     Routes computed in flight (rolling)              #         108         121      -11%   
+[world_node-3]     Planning time per route (on board)              ms       125.9       149.0      -16%   
+[world_node-3]     Longest planning time                           ms         618         835      -26%   
+[world_node-3] 
+[world_node-3] [1m  AUTONOMY & SAFETY[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Route switches in flight (re-plans)              #          22          17      +29%   
+[world_node-3]     Stuck events                                     #           1           1       ±0%   [38;5;245m= same[0m
+[world_node-3]     Fail-safe escapes                                #           0           0        ±0   [38;5;245m= same[0m
+[world_node-3]     Reactive drone avoidance                         s        41.2        51.9      -21%   [38;5;77m▲ better[0m
+[world_node-3]     Safety-filter interventions                      #         623         652       -4%   [38;5;77m▲ better[0m
+[world_node-3]     Obstacle contacts                                #           0           0        ±0   [38;5;245m= same[0m
+[world_node-3]     Drone-to-drone contacts                          #           0           1     -100%   [38;5;77m▲ better[0m
+[world_node-3]     Closest same-altitude pair                       m        1.15        1.00      +15%   [38;5;77m▲ better[0m
+[world_node-3]     Closest pair (3-D, en route)                     m        1.15        1.00      +15%   [38;5;77m▲ better[0m
+[world_node-3]     Separation margin (downwash-aware)               m       -0.14       -0.29     +0.15   [38;5;77m▲ better[0m
+[world_node-3]     Time in another drone's downwash                 s         0.0         0.0        ±0   [38;5;245m= same[0m
+[world_node-3]     Strongest downdraft felt                       m/s        0.00        0.00        ±0   [38;5;245m= same[0m
+[world_node-3]     Hidden pines in each drone's map (mean)         /6         3.8         3.8       ±0%   [38;5;245m= same[0m
+[world_node-3] 
+[world_node-3] [1m  COORDINATION (give-way, drones with the swarm radio)[0m
+[world_node-3] [38;5;245m    metric                                        unit    this run    baseline    change   verdict[0m
+[world_node-3]     Time giving way (all drones)                     s         0.0         0.0        ±0   
+[world_node-3]       of it holding position                         s         0.0         0.0        ±0   
+[world_node-3]       of it slowing down                             s         0.0         0.0        ±0   
+[world_node-3]       of it stepping left                            s         0.0         0.0        ±0   
+[world_node-3]       of it stepping right                           s         0.0         0.0        ±0   
+[world_node-3]       of it climbing                                 s         0.0         0.0        ±0   
+[world_node-3]       of it descending                               s         0.0         0.0        ±0   
+[world_node-3]     Turn-trading cycles executed                     #           0           0        ±0   
+[world_node-3] 
+[world_node-3]   vs baseline: [38;5;77m14 metrics better[0m, [38;5;203m5 worse[0m, 8 about the same
+[world_node-3] 
+[world_node-3] [1m  PER DRONE (the fleet metrics above cover all of them)[0m
+[world_node-3] [38;5;245m    drone   config              state     energy kJ  dist m  path RMS m  landing m  loc RMS m  give-way s  downwash s  contacts (obst/drone)[0m
+[world_node-3]     drone1  cam3                LANDED         5.29    26.1        0.88       0.05       0.05         0.0         0.0         0 / 0
+[world_node-3]     drone2  cam3                LANDED         5.60    20.3        0.31       0.07       0.70         0.0         0.0         0 / 0
+[world_node-3]     drone3  cam3                LANDED         5.28    17.9        0.38       0.07       0.05         0.0         0.0         0 / 0
+[world_node-3]     drone4  cam3                LANDED         3.22    12.1        0.86       0.07       0.04         0.0         0.0         0 / 0
+[world_node-3]     drone5  cam3                LANDED         4.76    23.7        3.77       0.06       0.04         0.0         0.0         0 / 0
+[world_node-3] [38;5;51m────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[world_node-3] 
+[world_node-3] [INFO] [1795154266.852060742] [swarm_world]: Fleet report saved to /media/sf_swarm_ws/results/cam3_20261120_112454/summary.json. Compare all configurations with:  ros2 run swarm_intel study --gazebo
+[INFO] [world_node-3]: process has finished cleanly [pid 17433]
+[INFO] [launch.user]: [swarm_intel] mission finished - shutting down
+[INFO] [drone_node-8]: sending signal 'SIGINT' to process[drone_node-8]
+[INFO] [drone_node-7]: sending signal 'SIGINT' to process[drone_node-7]
+[INFO] [drone_node-6]: sending signal 'SIGINT' to process[drone_node-6]
+[INFO] [drone_node-5]: sending signal 'SIGINT' to process[drone_node-5]
+[INFO] [drone_node-4]: sending signal 'SIGINT' to process[drone_node-4]
+[INFO] [parameter_bridge-2]: sending signal 'SIGINT' to process[parameter_bridge-2]
+[INFO] [gazebo-1]: sending signal 'SIGINT' to process[gazebo-1]
+[parameter_bridge-2] [INFO] [1795154268.469483275] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [parameter_bridge-2]: process has finished cleanly [pid 17431]
+[INFO] [drone_node-5]: process has finished cleanly [pid 17437]
+[INFO] [drone_node-4]: process has finished cleanly [pid 17435]
+[INFO] [gazebo-1]: process has finished cleanly [pid 17429]
+[INFO] [launch.user]: [swarm_intel] Gazebo closed - shutting down
+[INFO] [drone_node-6]: process has finished cleanly [pid 17439]
+[INFO] [drone_node-7]: process has finished cleanly [pid 17441]
+[INFO] [drone_node-8]: process has finished cleanly [pid 17443]
