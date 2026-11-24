@@ -1,0 +1,22 @@
+{
+  "model_version": "2026.11-fleet.3",
+  "package_version": "1.8.5",
+  "planner": "rrtstar",
+  "give_way": "priority_energy",
+  "openblas_coretype": "Prescott",
+  "numpy": "2.5.3",
+  "python": "3.13.18",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "created": "2026-11-24T00:38:04",
+  "kind": "study",
+  "source": "Headless simulation (same mission code, no GUI)",
+  "missions": "10 forest layouts x 4 seeds x 6 configs, camera 360 deg, planner RRT*, give-way fixed priority, energy-priced manoeuvre (ablation), wind 0.2 m/s, speed x1.0, package 2026.11-fleet.3",
+  "configurations": [
+    "cam3_sensor",
+    "cam3_sensor_swarm",
+    "all",
+    "cam3_swarm",
+    "cam2_swarm",
+    "sensor_swarm"
+  ]
+}

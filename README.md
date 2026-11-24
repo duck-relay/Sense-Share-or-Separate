@@ -38,7 +38,7 @@ From the final run of package 1.8.4 (model 2026.11-fleet.3, [`results/`](results
 Requirements: Ubuntu 22.04, ROS 2 Humble, Gazebo Fortress with `ros_gz`, Python 3.10.
 
 ```bash
-git clone https://github.com/<user>/sense-share-separate.git ~/swarm_ws
+git clone https://github.com/duck-relay/Sense-Share-or-Separate.git ~/swarm_ws
 cd ~/swarm_ws
 pip3 install "numpy==1.26.4"   # the version the published results used
 sudo apt install -y python3-matplotlib xterm

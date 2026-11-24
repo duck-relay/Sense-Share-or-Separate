@@ -1,0 +1,72 @@
+diff --git a/src/swarm_intel/swarm_intel/agent.py b/src/swarm_intel/swarm_intel/agent.py
+index d1d6192..1f17d32 100644
+--- a/src/swarm_intel/swarm_intel/agent.py
++++ b/src/swarm_intel/swarm_intel/agent.py
+@@ -506,7 +506,7 @@ class DroneAgent:
+         for pr in peers:
+             buf = C.REACTIVE_BUFFER
+             if self.swarm and pr.get('radio'):                 # a radio peer (not only a sensor track)
+-                if C.GIVE_WAY == 'priority':
++                if C.GIVE_WAY in ('priority', 'priority_energy'):
+                     if not (pr.get('boxed_in') and pr['priority'] > self.spec.priority):
+                         continue
+                 elif not self._covered(pr['id']):              # its round message did not arrive in time:
+@@ -574,9 +574,16 @@ class DroneAgent:
+             out = self._give_way_priority(t, est, v_xy, peers)
+             self.gw_kind = self._kind(out, v_xy) if self.yielding else None
+             return out
++        if C.GIVE_WAY == 'priority_energy':
++            # ABLATION: fixed priorities (drone order, as 'priority') but the manoeuvre is chosen exactly as in
++            # turn trading (energy-priced, 32 horizontal candidates + climb / descend). Only who yields differs
++            # from 'ttc'; only how the manoeuvre is chosen differs from 'priority'.
++            ahead = {pr['id'] for pr in peers if pr.get('radio') and pr.get('priority') is not None
++                     and pr['priority'] < self.spec.priority}
++            return self._give_way_ttc(t, est, v_xy, peers, ahead=ahead)
+         return self._give_way_ttc(t, est, v_xy, peers)
+ 
+-    def _give_way_ttc(self, t, est, v_xy, peers):
++    def _give_way_ttc(self, t, est, v_xy, peers, ahead=None):
+         """Give way to the drones that pass before this one in its cluster's turn order (ttc.py),
+         with the manoeuvre of least energy that keeps the separation standard + GIVE_WAY_BUFFER to
+         their broadcast intents: continue, slow down, hold, step left or right (the 32 horizontal
+@@ -584,7 +591,10 @@ class DroneAgent:
+         not to cut into them within 1.5 s. A drone with no drone before it flies on. If no manoeuvre
+         is safe it reports itself boxed in, and the others go round it."""
+         self.boxed_in = False
+-        ahead = self._ahead_ids() if self.swarm else set()
++        if ahead is None:
++            ahead = self._ahead_ids() if self.swarm else set()
++        elif not self.swarm:
++            ahead = set()
+         near = [pr for pr in peers if pr.get('airborne', True) and pr.get('radio')
+                 and float(np.linalg.norm(est[:2] - pr['pos'][:2])) < 10.0]
+         hp = [pr for pr in near if pr['id'] in ahead]
+diff --git a/src/swarm_intel/swarm_intel/mission.py b/src/swarm_intel/swarm_intel/mission.py
+index 5449d07..8a93685 100644
+--- a/src/swarm_intel/swarm_intel/mission.py
++++ b/src/swarm_intel/swarm_intel/mission.py
+@@ -153,7 +153,7 @@ class DroneRuntime:
+                'sigma': a.ekf.sigma_xy(), 'airborne': a.airborne, 'state': a.state, 'yielding': a.yielding,
+                'boxed_in': a.boxed_in, 'intent': a.intent(), 'scans': list(a.scans_out),
+                'ts': getattr(self, 't_sense', None)}
+-        if C.GIVE_WAY == 'priority':                 # only the fixed-priority comparison sends a rank
++        if C.GIVE_WAY in ('priority', 'priority_energy'):   # only the fixed-priority comparisons send a rank
+             msg['priority'] = a.spec.priority
+         if a.trader is not None:
+             msg['ttc'] = a.trader.message()
+diff --git a/src/swarm_intel/swarm_intel/ttc.py b/src/swarm_intel/swarm_intel/ttc.py
+index 34a2111..bd5f375 100644
+--- a/src/swarm_intel/swarm_intel/ttc.py
++++ b/src/swarm_intel/swarm_intel/ttc.py
+@@ -56,8 +56,9 @@ import numpy as np
+ from . import config as C
+ from . import downwash as DW
+ 
+-GIVE_WAYS = ('ttc', 'priority')
+-GIVE_WAY_NAMES = {'ttc': 'turn trading (TTC)', 'priority': 'fixed priority'}
++GIVE_WAYS = ('ttc', 'priority', 'priority_energy')
++GIVE_WAY_NAMES = {'ttc': 'turn trading (TTC)', 'priority': 'fixed priority',
++                  'priority_energy': 'fixed priority, energy-priced manoeuvre (ablation)'}
+ TTC_PERIOD = 0.5          # s between trading rounds (at least; longer on a slow link)
+ PHASE_PRICES = 0.1        # s into a round: routes are in, every drone prices its turns (ideal link)
+ PHASE_TRADE = 0.2         # s into a round: prices are in, every drone trades (ideal link)

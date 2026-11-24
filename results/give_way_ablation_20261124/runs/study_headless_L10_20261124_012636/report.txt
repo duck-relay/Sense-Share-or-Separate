@@ -1,0 +1,98 @@
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+ NAVIGATION STUDY — every configuration vs the BASELINE (3-point camera + VIO)
+ source: Headless simulation (same mission code, no GUI)   |   10 forest layouts x 4 seeds x 6 configs, camera 360 deg, planner RRT*, give-way turn trading (TTC), wind 0.2 m/s, speed x1.0, package 2026.11-fleet.3   |   the whole fleet is scored: every metric covers all 5 drones
+ ▲ better / ▼ worse than the baseline: mean paired difference (same forest and seed) significant in a sign-flip permutation test, Holm-corrected across configurations per metric (p < 0.05), AND more than 2 %; otherwise about the same   |   ◆ baseline
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+ Configurations: cam3_sensor = 3-point camera + VIO   cam3_sensor_swarm = 3-point camera + VIO + swarm   all = All-in-one: 2-point camera + VIO + swarm   cam3_swarm = 3-point camera + swarm
+                 cam2_swarm = 2-point camera + swarm   sensor_swarm = VIO + swarm
+
+ 1) KEY METRICS  mean (change vs baseline), all 5 drones: energy and flight time summed, path and position error averaged over the drones, separation margin of the closest pair
+ config                     Energy kJ   Flight time s      Path RMS m  Position RMS m   Sep. margin m       Mission s        Goals /5       Tree hits      Drone hits      Downwash s
+ cam3_sensor ◆                23.784           140.2           1.222           0.041           -0.14            40.6               5               0               0             0.0 
+ cam3_sensor_swarm      24.632 (+4%)     143.6 (+2%)     1.282 (+5%)     0.043 (+5%)    0.30 (+0.44)▲     43.6 (+7%)▼      5.0 (-1%)          0 (±0)          0 (±0)        0.0 (±0) 
+ all                    24.585 (+3%)     143.3 (+2%)     1.332 (+9%)     0.037 (-9%)▲   0.26 (+0.40)▲     43.7 (+8%)▼      5.0 (-1%)          0 (±0)          0 (±0)        0.0 (±0) 
+ cam3_swarm            26.085 (+10%)▼    152.7 (+9%)▼   1.375 (+12%)   0.192 (+369%)▼   0.31 (+0.45)▲    51.4 (+27%)▼       4 (-20%)▼   0.33 (+0.33)          0 (±0)        0.0 (±0) 
+ cam2_swarm             24.899 (+5%)     145.5 (+4%)     1.331 (+9%)    0.080 (+96%)▼   0.31 (+0.45)▲     44.5 (+9%)▼      4.8 (-4%)▼   0.03 (+0.03)          0 (±0)        0.0 (±0) 
+ sensor_swarm           24.883 (+5%)     147.2 (+5%)    1.412 (+16%)▼  0.348 (+749%)▼   0.30 (+0.45)▲    47.5 (+17%)▼     2.4 (-52%)▼   0.10 (+0.10)          0 (±0)        0.0 (±0) 
+
+ 2) ALL METRICS  (mean over runs)
+ metric                                        unit        cam3_sensor  cam3_sensor_swarm                all         cam3_swarm         cam2_swarm       sensor_swarm
+ ACCURACY
+ Drones that reached their goal                 #/5                 5                5.0                5.0                  4▼               4.8▼               2.4▼
+ Path deviation RMS (mean of the drones)          m             1.222              1.282              1.332              1.375              1.331              1.412▼
+ Tracking error RMS vs own plan (mean)            m             0.148              0.177▼             0.185▼             0.257▼             0.210▼             0.301▼
+ Path deviation max (worst drone)                 m             4.581              4.363              4.511              4.553              4.310              4.535 
+ Cruise within ±0.5 m of route (mean)             %              54.5               52.8               52.0               49.9▼              51.8               48.4▼
+ Landing error (mean)                             m             0.065              0.071              0.055              0.283▼             0.124▼             0.647▼
+ LOCALISATION
+ Position error RMS (mean of the drones)          m             0.041              0.043              0.037▲             0.192▼             0.080▼             0.348▼
+ Position error max (worst drone)                 m             0.177              0.195              0.139▲             1.807▼             0.568▼             1.177▼
+ Position error at touchdown (mean)               m             0.061              0.059              0.046▲             0.272▼             0.110▼             0.637▼
+ Position error RMS, drones without camera        m                 -                  -                  -                  -                  -              0.348 
+ Reported uncertainty 1-sigma (mean)              m             0.036              0.037              0.030              0.126              0.052              0.275 
+ EKF consistency NEES/2 (mean; 1 = honest)        x              0.64               0.65               0.71               0.86               0.90               0.58 
+ Camera frames with an N-point fix (mean)         %              66.0               65.6               86.3               65.0               85.8                  - 
+ Markers visible per frame (mean)                 #              3.61               3.59               3.58               3.57               3.58                  - 
+ Longest gap without camera fix (any drone)       s               7.0                9.7                2.2               16.0                3.0                  - 
+ Swarm peer-range updates used                    #                 0               30.6                3.1               67.0               11.5               0.82 
+ Camera/peer outliers rejected by the EKFs        #             139.3              143.2              114.4              143.8              119.5                  0 
+ ENERGY
+ Flight energy, all drones                       kJ            23.784             24.632             24.585             26.085▼            24.899             24.883 
+ Energy per metre flown                         J/m             233.1              242.1▼             239.9              251.1▼             238.9              240.3 
+ Average power per drone                          W             169.6              171.6              171.5              170.9              171.1              169.0 
+ Peak power (any drone)                           W             375.5              240.8▲             251.3▲             278.0▲             282.0▲             236.4▲
+ Navigation electronics power per drone           W               3.5                6.0                6.0                5.0                5.0                3.5 
+ Battery left (lowest drone)                      %             97.73              97.52              97.51              97.03              97.47              97.30 
+ TIME & PATH
+ Flight time, all drones                          s             140.2              143.6              143.3              152.7▼             145.5              147.2 
+ Mission time (until the last drone landed)       s              40.6               43.6▼              43.7▼              51.4▼              44.5▼              47.5▼
+ Distance flown, all drones                       m             102.1              101.8              102.6              104.9              104.2              103.4 
+ Flown / reference route length (mean)            x             1.111              1.106              1.112              1.139              1.132              1.121 
+ Max speed (any drone)                          m/s              1.59               1.41               1.40               1.58               1.45               1.42 
+ Routes computed in flight (rolling)              #             107.0              108.2              108.0              120.1              111.6              112.7 
+ Planning time per route (on board)              ms              43.8               46.5               45.0               45.1               43.6               47.6 
+ Longest planning time                           ms             318.5              362.8              348.5              351.1              346.8              345.5 
+ AUTONOMY & SAFETY
+ Route switches in flight (re-plans)              #              21.2               15.6               14.9               26.6               18.7               19.0 
+ Stuck events                                     #              0.12                  0                  0               0.12                  0               0.10 
+ Fail-safe escapes                                #                 0                  0                  0                  0                  0               0.05 
+ Reactive drone avoidance                         s              36.0                3.0▲               2.8▲               2.7▲               2.7▲               2.5▲
+ Safety-filter interventions                      #             458.6              126.7▲             134.7▲             341.1              182.1▲             233.3▲
+ Obstacle contacts                                #                 0                  0                  0               0.33               0.03               0.10 
+ Drone-to-drone contacts                          #                 0                  0                  0                  0                  0                  0 
+ Closest same-altitude pair                       m              1.15               1.59▲              1.55▲              1.60▲              1.60▲              1.59▲
+ Closest pair (3-D, en route)                     m              1.15               1.59▲              1.55▲              1.60▲              1.60▲              1.59▲
+ Separation margin (downwash-aware)               m             -0.14               0.30▲              0.26▲              0.31▲              0.31▲              0.30▲
+ Time in another drone's downwash                 s               0.0                0.0                0.0                0.0                0.0                0.0 
+ Strongest downdraft felt                       m/s              0.00               0.00               0.00               0.01               0.01               0.01 
+ Hidden pines in each drone's map (mean)         /6               3.9                5.8▲               5.8▲               5.7▲               5.8▲               5.8▲
+ COORDINATION
+ Time giving way (all drones)                     s               0.0               25.7               24.1               26.9               24.1               23.0 
+   of it holding position                         s               0.0                1.4                1.6                1.5                1.1                1.2 
+   of it slowing down                             s               0.0                5.9                5.5                5.4                4.7                4.9 
+   of it stepping left                            s               0.0                9.4                9.3                9.4                9.9                9.0 
+   of it stepping right                           s               0.0                5.5                4.6                6.7                5.2                4.7 
+   of it climbing                                 s               0.0                0.0                0.0                0.0                0.0                0.0 
+   of it descending                               s               0.0                0.0                0.0                0.0                0.0                0.0 
+ Turn-trading cycles executed                     #                 0                5.0                4.8                  6                4.6                5.0 
+
+ 3) SUMMARY vs BASELINE
+  3-point camera + VIO + swarm                        7 better   3 worse  17 same   | energy    +4%  flight time    +2%  path error    +5%  position error     +5%
+  All-in-one: 2-point camera + VIO + swarm           10 better   2 worse  15 same   | energy    +3%  flight time    +2%  path error    +9%  position error     -9%
+  3-point camera + swarm                              6 better  11 worse  10 same   | energy   +10%  flight time    +9%  path error   +12%  position error   +369%
+  2-point camera + swarm                              7 better   7 worse  13 same   | energy    +5%  flight time    +4%  path error    +9%  position error    +96%
+  VIO + swarm                                         7 better   9 worse  11 same   | energy    +5%  flight time    +5%  path error   +16%  position error   +749%
+
+  Pareto-optimal (lowest energy AND path error): Baseline: 3-point camera + VIO
+  Pareto-optimal (lowest energy AND position error): Baseline: 3-point camera + VIO, All-in-one: 2-point camera + VIO + swarm
+  Lowest energy: cam3_sensor   |   most accurate paths: cam3_sensor   |   best localisation: all
+
+ 4) STATISTICS  paired difference vs baseline: mean ±95 % CI, Holm-corrected p, effect size d_z
+ config                                      Energy kJ                    Flight time s                       Path RMS m                   Position RMS m                    Sep. margin m                        Mission s
+ cam3_sensor_swarm         +0.849 ±0.91 p=0.200 d=+0.3        +3.35 ±5.2 p=0.404 d=+0.2     +0.0593 ±0.12 p=0.324 d=+0.2   +0.00214 ±0.003 p=0.162 d=+0.2    +0.442 ±0.076 p=<0.001 d=+1.9        +2.93 ±2.2 p=0.010 d=+0.4
+ all                       +0.801 ±0.94 p=0.200 d=+0.3        +3.07 ±5.3 p=0.404 d=+0.2      +0.109 ±0.11 p=0.156 d=+0.3 -0.00369 ±0.0018 p=<0.001 d=-0.7    +0.403 ±0.073 p=<0.001 d=+1.8        +3.12 ±1.9 p=0.003 d=+0.5
+ cam3_swarm                     +2.3 ±2 p=0.012 d=+0.4         +12.4 ±12 p=0.025 d=+0.3      +0.152 ±0.13 p=0.083 d=+0.4    +0.151 ±0.058 p=<0.001 d=+0.8    +0.449 ±0.067 p=<0.001 d=+2.1        +10.8 ±11 p=<0.001 d=+0.3
+ cam2_swarm                 +1.12 ±0.97 p=0.100 d=+0.4        +5.31 ±5.5 p=0.233 d=+0.3      +0.109 ±0.12 p=0.156 d=+0.3   +0.0392 ±0.016 p=<0.001 d=+0.8    +0.454 ±0.082 p=<0.001 d=+1.8        +3.85 ±2.2 p=0.003 d=+0.6
+ sensor_swarm                 +1.1 ±1.4 p=0.200 d=+0.3        +6.97 ±7.9 p=0.233 d=+0.3        +0.19 ±0.1 p=0.003 d=+0.6    +0.307 ±0.042 p=<0.001 d=+2.3    +0.446 ±0.075 p=<0.001 d=+1.9       +6.91 ±4.9 p=<0.001 d=+0.5
+  (40 paired missions per configuration; d_z = mean difference / SD of the differences)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════

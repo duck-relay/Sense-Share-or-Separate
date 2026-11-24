@@ -18,6 +18,7 @@ The final run of package 1.8.4 (model 2026.11-fleet.3), on an Intel Core i7-1075
 | `speed_sweep/` | **Speed sweep:** 5 configurations at 0.84 / 1.2 / 1.56 / 1.92 m/s, 4 seeds | 80 |
 | `study_headless_astar_L10_20261120_081411/` | **Planner comparison:** A\* instead of RRT\* (8 configurations, 10 forests × 4 seeds, the main study's missions) | 320 |
 | `study_headless_priority_L10_20261120_084413/` | **Give-way comparison:** fixed priorities instead of turn trading (baseline + 6 radio configurations, 10 forests × 4 seeds, the main study's missions) | 280 |
+| `give_way_ablation_20261124/` | **Give-way ablation:** fixed priorities with turn trading's energy-priced manoeuvres (the patch is in the folder), and fixed priorities and turn trading flown again; baseline + 5 radio configurations, 10 forests × 4 seeds, the give-way comparison's missions, on the second computer (above). See its `README.md` | 3 × 240 |
 | `planner_bench_20261120_084418/` | **Planner scaling:** RRT\* vs A\* on 20 / 40 / 80 m fields with 0.2 / 0.1 / 0.05 m cells, 10 forests each, plus a field cut in two; planning only | 180 + 18 plans per planner |
 | `<configuration>_20261120_*/` (36 folders), `gazebo_logs/` | **Gazebo runs:** the 12 configurations × seeds 0–2 in Gazebo Fortress without the GUI (Gazebo-study runs), with each launch's log | 36 |
 | `study_gazebo_20261120_113722/` | **Gazebo study:** the 36 runs, every configuration vs the baseline (3 seeds: ▲ / ▼ = more than 2 % and 2 standard errors) | 36 |
